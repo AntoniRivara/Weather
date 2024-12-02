@@ -1,0 +1,176 @@
+2024-12-02T20:32:52.880+03:00  INFO 13432 --- [Weather] [main] weathernow.weather.WeatherApplication    : Starting WeatherApplication using Java 19.0.2 with PID 13432 (C:\Weather\target\classes started by MrFisto in C:\Weather)
+2024-12-02T20:32:52.881+03:00 DEBUG 13432 --- [Weather] [main] weathernow.weather.WeatherApplication    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-02T20:32:52.881+03:00  INFO 13432 --- [Weather] [main] weathernow.weather.WeatherApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T20:32:53.319+03:00  INFO 13432 --- [Weather] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T20:32:53.353+03:00  INFO 13432 --- [Weather] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2024-12-02T20:32:53.682+03:00  INFO 13432 --- [Weather] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T20:32:53.692+03:00  INFO 13432 --- [Weather] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T20:32:53.693+03:00  INFO 13432 --- [Weather] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T20:32:53.729+03:00  INFO 13432 --- [Weather] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T20:32:53.729+03:00  INFO 13432 --- [Weather] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2024-12-02T20:32:53.752+03:00  INFO 13432 --- [Weather] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T20:32:53.886+03:00  INFO 13432 --- [Weather] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-12-02T20:32:53.887+03:00  INFO 13432 --- [Weather] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T20:32:53.894+03:00  INFO 13432 --- [Weather] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-12-02T20:32:53.986+03:00  INFO 13432 --- [Weather] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T20:32:54.033+03:00  INFO 13432 --- [Weather] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T20:32:54.065+03:00  INFO 13432 --- [Weather] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T20:32:54.287+03:00  INFO 13432 --- [Weather] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T20:32:54.887+03:00  INFO 13432 --- [Weather] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T20:32:54.929+03:00  INFO 13432 --- [Weather] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T20:32:55.147+03:00  WARN 13432 --- [Weather] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T20:32:55.374+03:00  INFO 13432 --- [Weather] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T20:32:55.380+03:00  INFO 13432 --- [Weather] [main] weathernow.weather.WeatherApplication    : Started WeatherApplication in 2.813 seconds (process running for 3.386)
+2024-12-02T20:33:00.323+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T20:33:00.324+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T20:33:00.325+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T20:33:00.353+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-1] weathernow.weather.WeatherController     : Получен запрос на получение всех погодных данных.
+2024-12-02T20:33:00.353+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-1] weathernow.weather.WeatherService        : Retrieving all weather data from the database
+2024-12-02T20:33:09.224+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-3] weathernow.weather.WeatherService        : Fetching weather data for city: Paris
+2024-12-02T20:33:09.232+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-3] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:09.376+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-3] weathernow.weather.WeatherService        : Successfully fetched weather data for city: Paris
+2024-12-02T20:33:12.483+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-4] weathernow.weather.WeatherService        : Fetching weather data for city: Omsk
+2024-12-02T20:33:12.485+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-4] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=Omsk&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:12.533+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-4] weathernow.weather.WeatherService        : Successfully fetched weather data for city: Omsk
+2024-12-02T20:33:15.932+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-5] weathernow.weather.WeatherService        : Fetching weather data for city: Moscow
+2024-12-02T20:33:15.933+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-5] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:15.981+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-5] weathernow.weather.WeatherService        : Successfully fetched weather data for city: Moscow
+2024-12-02T20:33:19.817+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-7] weathernow.weather.WeatherService        : Fetching weather data for city: MoScOw
+2024-12-02T20:33:19.818+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-7] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=MoScOw&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:19.867+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-7] weathernow.weather.WeatherService        : Successfully fetched weather data for city: MoScOw
+2024-12-02T20:33:26.726+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-6] weathernow.weather.WeatherService        : Fetching weather data for city: MOSCOW
+2024-12-02T20:33:26.728+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-6] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=MOSCOW&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:26.813+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-6] weathernow.weather.WeatherService        : Successfully fetched weather data for city: MOSCOW
+2024-12-02T20:33:28.450+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-8] weathernow.weather.WeatherService        : Fetching weather data for city: MOSCOW
+2024-12-02T20:33:28.451+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-8] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=MOSCOW&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:28.502+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-8] weathernow.weather.WeatherService        : Successfully fetched weather data for city: MOSCOW
+2024-12-02T20:33:36.313+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-9] weathernow.weather.WeatherService        : Fetching weather data for city: Pem
+2024-12-02T20:33:36.314+03:00 DEBUG 13432 --- [Weather] [http-nio-8080-exec-9] weathernow.weather.WeatherService        : Sending request to Weather API: http://api.openweathermap.org/data/2.5/weather?q=Pem&appid=056de0774b33cb4f7c0b80ec3749f8c8&units=metric
+2024-12-02T20:33:36.422+03:00 ERROR 13432 --- [Weather] [http-nio-8080-exec-9] weathernow.weather.WeatherService        : Error fetching weather data for city: Pem: 404 Not Found: "{"cod":"404","message":"city not found"}"
+
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "{"cod":"404","message":"city not found"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:404) ~[spring-web-6.1.13.jar:6.1.13]
+	at weathernow.weather.WeatherService.fetchWeatherData(WeatherService.java:65) ~[classes/:na]
+	at weathernow.weather.WeatherController.addWeatherData(WeatherController.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-12-02T20:33:36.429+03:00 ERROR 13432 --- [Weather] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Error fetching weather data for Pem: 404 Not Found: "{"cod":"404","message":"city not found"}"] with root cause
+
+java.lang.RuntimeException: Error fetching weather data for Pem: 404 Not Found: "{"cod":"404","message":"city not found"}"
+	at weathernow.weather.WeatherService.fetchWeatherData(WeatherService.java:88) ~[classes/:na]
+	at weathernow.weather.WeatherController.addWeatherData(WeatherController.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-12-02T20:37:33.214+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-4] weathernow.weather.WeatherController     : Получен запрос на получение всех погодных данных.
+2024-12-02T20:37:33.214+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-4] weathernow.weather.WeatherService        : Retrieving all weather data from the database
+2024-12-02T20:37:40.630+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-5] weathernow.weather.WeatherController     : Получен запрос на получение всех погодных данных.
+2024-12-02T20:37:40.630+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-5] weathernow.weather.WeatherService        : Retrieving all weather data from the database
+2024-12-02T20:37:41.344+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-7] weathernow.weather.WeatherController     : Получен запрос на получение всех погодных данных.
+2024-12-02T20:37:41.344+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-7] weathernow.weather.WeatherService        : Retrieving all weather data from the database
+2024-12-02T20:37:42.157+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-6] weathernow.weather.WeatherController     : Получен запрос на получение всех погодных данных.
+2024-12-02T20:37:42.157+03:00  INFO 13432 --- [Weather] [http-nio-8080-exec-6] weathernow.weather.WeatherService        : Retrieving all weather data from the database
+2024-12-02T23:11:21.627+03:00  WARN 13432 --- [Weather] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h24m57s75ms323µs900ns).
+2024-12-02T23:34:45.313+03:00  INFO 13432 --- [Weather] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T23:34:45.363+03:00  INFO 13432 --- [Weather] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T23:34:45.382+03:00  INFO 13432 --- [Weather] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
