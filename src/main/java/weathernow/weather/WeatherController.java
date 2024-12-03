@@ -27,7 +27,7 @@ public class WeatherController {
 
         // Добавляем данные из базы в ответ
         for (WeatherData weatherData : weatherDataList) {
-            response.append("Weather in ")
+            response.append("Погода в ")
                     .append(weatherData.getCity())
                     .append(": ")
                     .append(weatherData.getTemperature())
